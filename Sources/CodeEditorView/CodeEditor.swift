@@ -253,7 +253,8 @@ extension CodeEditor: UIViewRepresentable {
     if abs(position.verticalScrollPosition - textView.verticalScrollPosition) > 0.0001 {
       textView.verticalScrollPosition = position.verticalScrollPosition
     }
-    if theme.id != codeView.theme.id { codeView.theme = theme }
+    // if theme.id != codeView.theme.id { codeView.theme = theme }
+    codeView.theme = theme
     if layout != codeView.viewLayout { codeView.viewLayout = layout }
 
     context.coordinator.updatingView = false
